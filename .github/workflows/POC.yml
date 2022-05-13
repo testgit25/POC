@@ -21,5 +21,6 @@ jobs:
         run: |
           wget -O xray-ubuntu-latest.tar.gz https://releases.jfrog.io/artifactory/jfrog-xray/xray-linux/[RELEASE]/jfrog-xray-[RELEASE]-linux.tar.gz?_gl=1*npua3y*_ga*ODQzODQ5OTI0LjE2NTI0Nzg0MTM.*_ga_SQ1NR9VTFJ*MTY1MjQ3ODQxMC4xLjEuMTY1MjQ4MTcyOS4xNg..
           cd /home/runner/work/POC/POC
-          ls
+          tar -xzf xray-ubuntu-latest.tar.gz
+          ./installXray-ubuntu.sh --use-defaults
           
