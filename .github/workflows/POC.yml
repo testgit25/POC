@@ -28,7 +28,7 @@ jobs:
           cd jfrog-xray-3.48.2-linux
           cd app/bin
           ls
-          sh xray.sh 
+          sudo bash xray.sh 
     
         
         
