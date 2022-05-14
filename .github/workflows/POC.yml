@@ -26,7 +26,7 @@ jobs:
           cd /opt/jfrog
           tar -xzf xray-ubuntu-latest.tar.gz
           cd jfrog-xray-3.48.2-linux
-          cd var/bin
+          cd app/bin
     
         
         
