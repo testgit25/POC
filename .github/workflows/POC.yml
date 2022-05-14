@@ -50,7 +50,7 @@ jobs:
       - name: Install JFrog CLI
         run: |
           curl -fL https://getcli.jfrog.io/v2-jf | sh
-          jfrog --version
+          jf --version
           
       - name: Scan
         run: |
