@@ -49,7 +49,7 @@ jobs:
           
       - name: Install JFrog CLI
         run: |
-          curl -fL https://getcli.jfrog.io/v2-jf | sh
+          npm install -g jfrog-cli-v2-jf
           jf --version
           
       - name: Scan
