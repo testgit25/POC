@@ -27,6 +27,7 @@ jobs:
           tar -xzf xray-ubuntu-latest.tar.gz
           cd jfrog-xray-3.48.2-linux
           cd app/bin
+          ls
     
         
         
