@@ -46,6 +46,20 @@ jobs:
           cd app/bin
           ls
           sudo bash xray.sh start
+          
+      - name: Install JFrog CLI
+        run: |
+          curl -fL https://getcli.jfrog.io/v2-jf | sh
+          jfrog --version
+          
+      - name: Scan
+        run: |
+          jf scan "/home/runner/work/POC/POC/poc.sql"
+          
+      
+      
+          
+        
     
         
         
