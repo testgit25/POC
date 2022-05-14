@@ -22,12 +22,19 @@ jobs:
           sudo apt update
           sudo apt install db-util
           
-          sudo apt-get update -y
-          sudo apt-get install curl gnupg -y
-          curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
-          sudo apt-get install apt-transport-https
-          sudo apt-get update -y
-          sudo apt-get install rabbitmq-server -y --fix-missing
+          # sync package metadata
+          sudo apt-get update
+          # install dependencies manually
+          sudo apt-get -y install socat logrotate init-system-helpers adduser
+
+          # download the package
+          sudo apt-get -y install wget
+          wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.10.1/rabbitmq-server_3.10.1-1_all.deb
+
+          # install the package with dpkg
+          sudo dpkg -i rabbitmq-server_3.10.1-1_all.deb
+
+          rm rabbitmq-server_3.10.1-1_all.deb
 
           wget -O xray-ubuntu-latest.tar.gz https://releases.jfrog.io/artifactory/jfrog-xray/xray-linux/[RELEASE]/jfrog-xray-[RELEASE]-linux.tar.gz?_gl=1*npua3y*_ga*ODQzODQ5OTI0LjE2NTI0Nzg0MTM.*_ga_SQ1NR9VTFJ*MTY1MjQ3ODQxMC4xLjEuMTY1MjQ4MTcyOS4xNg..
           cd /home/runner/work/POC/POC
