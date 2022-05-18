@@ -57,14 +57,15 @@ jobs:
           ls
         
           
-      - name: Install JFrog CLI
-        run: |
-          npm install -g jfrog-cli-v2-jf
-          jf --version
+#       - name: Install JFrog CLI
+#         run: |
+#           npm install -g jfrog-cli-v2-jf
+#           jf --version
           
       - name: Scan
         run: |
           curl -fL https://getcli.jfrog.io?setup | sh
+          cd /usr/local/bin
           jf scan "/home/runner/work/POC/POC/poc.sql"
           
       
