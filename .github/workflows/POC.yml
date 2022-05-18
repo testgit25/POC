@@ -57,10 +57,10 @@ jobs:
           ls
         
           
-#       - name: Install JFrog CLI
-#         run: |
-#           npm install -g jfrog-cli-v2-jf
-#           jf --version
+      - name: Install JFrog CLI
+        run: |
+          npm install -g jfrog-cli-v2-jf
+          jf --version
           
       - name: Scan
         run: |
