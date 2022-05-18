@@ -65,7 +65,7 @@ jobs:
       - name: Scan
         run: |
           curl -fL https://getcli.jfrog.io?setup | sh
-          cd /usr/local/bin
+          cd "/usr/local/bin"
           jf scan "/home/runner/work/POC/POC/poc.sql"
           
       
