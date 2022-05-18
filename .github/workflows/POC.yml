@@ -23,6 +23,10 @@ jobs:
           sudo apt install ./artifactory-pro.deb -y
           sudo systemctl start artifactory.service
           
+      - name: Install jq
+        run: |
+          sudo apt-get install jq
+          
           
       - name: Install XRay
         run: |
